@@ -33,17 +33,17 @@ class User:
                         print("\t\t\t\t- > logged-in successfully! < -")
                         flag = False
                         name = User.__username[i]
-                    else:
-                        print("Error!, invalid credentials")
-                        try:
-                            userchoices = int(input("\nWant retry to signing-in ? or exit the "
-                                                "application.\n\t 1.Sign-in\t2.Exit\n"))
-                        except:
-                            print("Invalid entry !\nPlease try to enter a valid choice")
-                        if userchoices == 1:
-                            flag = True
-                        elif userchoices == 2:
-                            quit()
+                else:
+                    print("Error!, invalid credentials")
+                    try:
+                        userchoices = int(input("\nWant retry to signing-in ? or exit the "
+                                            "application.\n\t 1.Sign-in\t2.Exit\n"))
+                    except:
+                        print("Invalid entry !\nPlease try to enter a valid choice")
+                    if userchoices == 1:
+                        flag = True
+                    elif userchoices == 2:
+                        quit()
         return name
 
     def register_user(self):
